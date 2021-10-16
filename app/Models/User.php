@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Image;
 use App\Models\Media;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Jetstream\HasProfilePhoto;
@@ -62,8 +63,8 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function media()
+    public function images()
     {
-        return $this->hasMany(Media::class);
+        return $this->hasMany(Image::class);
     }
 }

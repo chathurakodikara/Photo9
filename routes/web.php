@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FacebookImagesController;
 use App\Http\Controllers\Auth\FacebookAuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +21,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
 # facebook auth managmenet
-Route::prefix('auth.facebook')->name('facebook.')->group(function ()
+Route::prefix('auth/facebook')->name('facebook.')->group(function ()
 {
     Route::get('redirect', [FacebookAuthController::class, 'handleFacebookRedirect'])->name('login');
     Route::get('callback', [FacebookAuthController::class, 'handleFacebookCallback'])->name('callback');
+});
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+    Route::get('/facebook-images', [FacebookImagesController::class, 'index'])->name('facebook-images');
 });
 
