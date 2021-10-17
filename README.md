@@ -7,9 +7,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About App
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Everone has a Facebook account so you know it is imposible to track what we posted. the app provided the 100 photos that you posted of Facebook. You can choose the best 9 photos and add to your own photo collection
+
+
+## Teck Pack
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
@@ -19,17 +22,47 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Teck Pack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- [Laravel 8](https://laravel.com/docs/8.x).
+- [Livewire for better user experience](https://laravel-livewire.com/docs/2.x/quickstart).
+- [Tailwind CSS for styles](https://tailwindcss.com/docs).
+- [MySQL as Database].
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+
+## Packages in the project
+- [Laravel Socialite for social login](https://laravel.com/docs/8.x/socialite).
+- [barryvdh's laravel-debugbar](https://github.com/barryvdh/laravel-debugbar).
+- Quickly make outgoing HTTP requests [ Guzzle HTTP client](https://laravel.com/docs/8.x/http-client).
+
+
+
+## How to Configure
+
+- Step 1
+* Clone git repo
+* Go to your folder and open with a code editor (VS code, Sublime text etc)
+* use CMD and run composer install to install php packages
+* then run npm install for node packages
+* after that npm run dev to build node assets. 
+
+- Step 2 time to create the app account
+Create Facebook Developer account using https://developers.facebook.com/apps/
+* You can login using your facebook username and password
+* Then click on Create App button. it might be in the right side
+* Select an app type. I prefer "Consumer" one. and click next
+* you can add your details Display name, App Contact Email and Business Manager account witch is a optional
+* Facebook will ask your to confrom your password
+
+
+- Step 3 - add your app secret and id to .env 
+- **FACEBOOK_CLIENT_ID
+- **FACEBOOK_CLIENT_SECRET
+
+
 
 ### Premium Partners
 
@@ -46,19 +79,3 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[OP.GG](https://op.gg)**
 - **[CMS Max](https://www.cmsmax.com/)**
 - **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
