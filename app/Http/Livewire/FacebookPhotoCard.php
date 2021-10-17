@@ -20,6 +20,8 @@ class FacebookPhotoCard extends Component
     {
         $facebook = new FacebookImageSearvice();
         $facebook_image = $facebook->show_image($image_id);
+        $facebook_image = $facebook_image['response'];
+
         $photo_count = Photo::count();
         if ($photo_count >= 9) {
             return redirect()->route('facebook-images')->with('error', 'Already selected 9 Photos !');

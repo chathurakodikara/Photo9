@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FacebookImagesController;
+use App\Http\Controllers\FacebookApiErrorController;
 use App\Http\Controllers\Auth\FacebookAuthController;
 
 

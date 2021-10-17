@@ -17,11 +17,26 @@ class FacebookImagesController extends Controller
     **/
     public function index()
     {
+        $images = [];
         $images_searvice = new FacebookImageSearvice();
         $facebook_images = $images_searvice->load_lates_image(); 
         $photo_collection = Photo::all();
 
-        $images = collect($facebook_images['data'])->map(function ($image) use($photo_collection)
+        /**
+         * redirect back if the api false
+         */
+        if ($facebook_images['success'] == false) {
+            return back()->withError($facebook_images['message']);
+        }
+
+        $images = $this->facebook_images_and_photo_from_collection($facebook_images, $photo_collection);
+
+        return view('facebook_images.index', compact('images', 'facebook_images'));
+    }
+
+    protected function facebook_images_and_photo_from_collection($facebook_images, $photo_collection)
+    {
+        return collect($facebook_images['response']['data'])->map(function ($image) use($photo_collection)
         {
             $is_image_in_the_collection = $photo_collection->where('image_id', $image['id'])->first() ? true : false;
             return [
@@ -32,8 +47,6 @@ class FacebookImagesController extends Controller
                 'status' => $is_image_in_the_collection
             ];
         });
-
-        return view('facebook_images.index', compact('images'));
     }
 
 

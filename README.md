@@ -24,6 +24,7 @@ Everone has a Facebook account so you know it is imposible to track what we post
 ## How to Configure
 
 - Step 1
+
 * Clone git repo
 * Go to your folder and open with a code editor (VS code, Sublime text etc)
 * use CMD and run composer install to install php packages
@@ -31,6 +32,7 @@ Everone has a Facebook account so you know it is imposible to track what we post
 * after that npm run dev to build node assets. 
 
 - Step 2 time to create the app account
+
 Create Facebook Developer account using https://developers.facebook.com/apps/
 * You can login using your facebook username and password
 * Then click on Create App button. it might be in the right side
@@ -39,7 +41,12 @@ Create Facebook Developer account using https://developers.facebook.com/apps/
 * Facebook will ask your to confrom your password
 
 
-- Step 3 - add your app secret and id to .env 
+- Step 3 - .env file configaration
+
+- Feel free to use the sample env file provide with the project
+- create a database and update your .env file
+- finaly update your facebook CLIENT_ID and CLIENT_SECRET. The information can be found in the facebook developer account you created
+- 
 - **FACEBOOK_CLIENT_ID
 - **FACEBOOK_CLIENT_SECRET
 
