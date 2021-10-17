@@ -27,7 +27,7 @@ Route::get('/', function () {
 # facebook auth managmenet
 Route::prefix('auth/facebook')->name('facebook.')->group(function ()
 {
-    Route::get('redirect', [FacebookAuthController::class, 'handleFacebookRedirect'])->name('login');
+    Route::get('redirect', [FacebookApauthController::class, 'handleFacebookRedirect'])->name('login');
     Route::get('callback', [FacebookAuthController::class, 'handleFacebookCallback'])->name('callback');
 });
 

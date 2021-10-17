@@ -15,7 +15,7 @@ The application configured as multitenant application. User only show their phot
 - MySQL as Database.
 
 ## API Documntation 
-- [Postman Documant](https://documenter.getpostman.com/view/12479368/UV5WDdo6).
+- [Postman documenter](https://documenter.getpostman.com/view/12479368/UV5WDdo6)
 
 
 ## Packages in the project

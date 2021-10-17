@@ -15,12 +15,10 @@ class OAuthTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * A basic feature test example.
-     *
+     * facebook oauth test 
+     * Mockery did not set the user propoery as a result the test redirecting login page
      * @return void
      */
-
-
 
     public function test_socialite_facebook_login() {
         $abstract_user = Mockery::mock('Laravel\Socialite\Two\User');
