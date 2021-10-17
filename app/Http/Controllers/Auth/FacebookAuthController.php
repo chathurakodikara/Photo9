@@ -20,15 +20,16 @@ class FacebookAuthController extends Controller
         return Socialite::driver(static::DRIVER_TYPE)->redirect();
     }
 
-
-    # retrieve the token and create user or update if exist
+    /**
+     * retrieve the token from facebook and create user or update if exist
+     * email address take as unique. if email adress exisit user will update unleses create a new user
+     * 
+     */
     public function handleFacebookCallback()
     {
         
         try {
             $facebook_user = Socialite::driver(static::DRIVER_TYPE)->user();
-
-            # user information update from facebook including name
             $user = User::updateOrCreate(['email' => $facebook_user->email ?? null], [
                 'name' => $facebook_user->name,
                 'email' => $facebook_user->email,
@@ -43,10 +44,10 @@ class FacebookAuthController extends Controller
         } 
 
         catch (\Exception $e) {
-            return redirect()->route('facebook-images')->with('error', 'General Exception : ' . json_encode($e->getMessage(), true));
+            return redirect()->route('login')->with('error', 'General Exception : ' . json_encode($e->getMessage(), true));
 
         }catch (\Error $e) {
-            return redirect()->route('facebook-images')->with('error', 'Error Exception : ' .json_encode($e->getMessage(), true));
+            return redirect()->route('login')->with('error', 'Error Exception : ' .json_encode($e->getMessage(), true));
         }
         
 
