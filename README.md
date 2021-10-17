@@ -6,6 +6,7 @@ Everyone has a Facebook account so you know it is imposible to track what we pos
 The application configured as multitenant application. User only show their photos. I have use Multitenantable traits in the Photo model 
 
 
+
 ## Tech Pack
 
 - [Laravel 8](https://laravel.com/docs/8.x).
@@ -13,6 +14,8 @@ The application configured as multitenant application. User only show their phot
 - [Tailwind CSS for styles](https://tailwindcss.com/docs).
 - MySQL as Database.
 
+## API Documntation 
+- [Postman Documant](https://documenter.getpostman.com/view/12479368/UV5WDdo6).
 
 
 ## Packages in the project
