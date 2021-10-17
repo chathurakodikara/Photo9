@@ -13,8 +13,9 @@ class FacebookImagesController extends Controller
 {
 
     /**
-     * create a collection joining facebook images and users saved photos
-    **/
+     * FacebookImageSearvice contain all the api call to facebook
+     */
+   
     public function index()
     {
         $images = [];
@@ -34,6 +35,9 @@ class FacebookImagesController extends Controller
         return view('facebook_images.index', compact('images', 'facebook_images'));
     }
 
+     /**
+     * create a collection joining facebook images and users saved photos
+    **/
     protected function facebook_images_and_photo_from_collection($facebook_images, $photo_collection)
     {
         return collect($facebook_images['response']['data'])->map(function ($image) use($photo_collection)

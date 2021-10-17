@@ -15,6 +15,8 @@ class FacebookPhotoCard extends Component
      /**
      * uses FacebookImageSearvice to fetch the image and strore the path 
      * 
+     * photo model provide only photos of loged in users
+     * 
     **/
     public function addImageToCollection($image_id)
     {

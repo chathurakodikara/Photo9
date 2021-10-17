@@ -30,12 +30,25 @@ The application configured as multitenant application. User only show their phot
 - Step 1
 
 * Clone git repo
+```shell
+:~# git clone https://github.com/chathurakodikara/Photo9.git
+```
 * Go to your folder and open with a code editor (VS code, Sublime text etc)
 * Use CMD and run composer install to install php packages
+```shell
+:~# composer install
+```
 * Then run npm install for node packages
-* After that npm run dev to build node assets. 
-* Migrate database (php artisan migrate) 
+```shell
+:~# npm install && npm run dev
+```
+* Migrate database 
 * I have provided faker for User and Image model. php artisan db:seed will insert the data
+
+```shell
+:~# php artisan migrate --seed
+```
+
 
 
 - Step 2 time to create the app account
