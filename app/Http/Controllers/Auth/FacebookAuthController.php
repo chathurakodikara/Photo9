@@ -11,10 +11,18 @@ use Laravel\Socialite\Facades\Socialite;
 
 class FacebookAuthController extends Controller
 {
-   
+   /**
+    * uses the laravel socialite package to login via facebook
+    * the package supports facebook, twitter, linkedin, google, github, gitlab, or bitbucket
+    * link to the docs https://laravel.com/docs/8.x/socialite
+
+    * created a CONST then it is easily customizable
+    */
     CONST DRIVER_TYPE = 'facebook';
 
-    # Generate access token with facebook
+    /**
+     * Generate access token with facebook
+     */
     public function handleFacebookRedirect()
     {
         return Socialite::driver(static::DRIVER_TYPE)->redirect();
@@ -27,7 +35,6 @@ class FacebookAuthController extends Controller
      */
     public function handleFacebookCallback()
     {
-        
         try {
             $facebook_user = Socialite::driver(static::DRIVER_TYPE)->user();
             $user = User::updateOrCreate(['email' => $facebook_user->email ?? null], [
