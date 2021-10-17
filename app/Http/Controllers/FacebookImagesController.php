@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+use App\Models\Photo;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -11,18 +12,18 @@ use App\Services\FacebookImageSearvice;
 class FacebookImagesController extends Controller
 {
 
+    /**
+     * create a collection joining facebook images and users saved photos
+    **/
     public function index()
     {
         $images_searvice = new FacebookImageSearvice();
         $facebook_images = $images_searvice->load_lates_image(); 
-        $user_image_collection = auth()->user()->images;
-  
-        /**
-         * create a collection joining facebook images and users saved images
-        **/
-        $images = collect($facebook_images['data'])->map(function ($image) use($user_image_collection)
+        $photo_collection = Photo::all();
+
+        $images = collect($facebook_images['data'])->map(function ($image) use($photo_collection)
         {
-            $is_image_in_the_collection = $user_image_collection->where('item_id', $image['id'])->first() ? true : false;
+            $is_image_in_the_collection = $photo_collection->where('image_id', $image['id'])->first() ? true : false;
             return [
                 'picture' => $image['picture'],
                 'name' =>  Str::limit($image['name'] ?? null, 25),

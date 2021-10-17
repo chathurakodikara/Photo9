@@ -17,9 +17,7 @@ class FacebookAuthController extends Controller
     # Generate access token with facebook
     public function handleFacebookRedirect()
     {
-        return Socialite::driver(static::DRIVER_TYPE)
-            ->scopes(['public_profile', 'user_photos'])
-            ->redirect();
+        return Socialite::driver(static::DRIVER_TYPE)->redirect();
     }
 
 
@@ -39,12 +37,16 @@ class FacebookAuthController extends Controller
                 'password' => Hash::make($facebook_user->id)
             ]);
           
-
             Auth::login($user);
-            return redirect()->route('dashboard');
+            return redirect()->route('photo.index');
 
-        } catch (\Exception $e) {
-            dd($e->getMessage());
+        } 
+
+        catch (\Exception $e) {
+            return redirect()->route('facebook-images')->with('error', 'General Exception : ' . json_encode($e->getMessage(), true));
+
+        }catch (\Error $e) {
+            return redirect()->route('facebook-images')->with('error', 'Error Exception : ' .json_encode($e->getMessage(), true));
         }
         
 

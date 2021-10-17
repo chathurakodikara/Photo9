@@ -2,7 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
+use App\Models\Photo;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        
+        Schema::disableForeignKeyConstraints();
+        User::truncate();
+        Photo::truncate();
+        Schema::enableForeignKeyConstraints();
+
+        User::factory(100)->hasPhotos(9)->create();
     }
 }

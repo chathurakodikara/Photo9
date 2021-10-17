@@ -8,7 +8,7 @@ $typeClass = ' border-green-100 bg-green-100 px-4 py-1 text-green-700';
 @endphp
 
 @if(session()->has($key))
-<div {{ $attributes->merge(['class' => 'flex gap-2 border rounded-full text-sm font-bold items-center w-96 '.$typeClass]) }}>
+<div {{ $attributes->merge(['class' => 'flex gap-2 border rounded-full text-sm font-bold items-center '.$typeClass]) }}>
 
     @if ($type == 'success')
     <svg xmlns="http://www.w3.org/2000/svg" class=" w-5 h-5" viewBox="0 0 20 20" fill="currentColor">

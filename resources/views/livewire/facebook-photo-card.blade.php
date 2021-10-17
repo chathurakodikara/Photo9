@@ -3,7 +3,7 @@
     <img class="object-cover h-full w-32 rounded" src="{!! $image['picture'] !!}" alt="">
     <div class=" flex-1 p-3 relative h-full overflow-hidden">
         {{ $image['name'] ?? '' }}
-        <div class=" absolute bottom-5 whitespace-nowrap text-sm text-gray-500">
+        <div class=" absolute bottom-5 whitespace-nowrap text-sm text-gray-500"> Posted
             {{ $image['created_time'] }}</div>
 
 

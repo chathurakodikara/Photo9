@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FacebookImagesController;
 use App\Http\Controllers\Auth\FacebookAuthController;
@@ -31,7 +32,8 @@ Route::prefix('auth/facebook')->name('facebook.')->group(function ()
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    
     Route::get('/facebook-images', [FacebookImagesController::class, 'index'])->name('facebook-images');
+    Route::get('/photos', [PhotoController::class, 'index'])->name('photo.index');
+    
 });
 
