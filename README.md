@@ -73,3 +73,9 @@ its time run the application and enjoy
 ```shell
 :~# php artisan serve
 ```
+
+
+## I am working on..
+* I stuck when creating test cases for OAuth. Got an issue with Mockery user and faking the process of login. If someone know where I got wrong. Please let me know. I am keen to lean about it  
+
+* Having a Docker container is grate. I already have a setup with me. However I feel it should improve. The Docker container will coming soon.. 
