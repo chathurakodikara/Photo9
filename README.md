@@ -27,7 +27,7 @@ The application configured as multitenant application. User only show their phot
 
 ## How to Configure
 
-- Step 1
+##### Step 1
 
 * Clone git repo
 ```shell
@@ -51,7 +51,7 @@ The application configured as multitenant application. User only show their phot
 
 
 
-- Step 2 time to create the app account
+##### Step 2 time to create the app account
 
 * Create Facebook Developer account using https://developers.facebook.com/apps/
 * You can login using your Facebook username and password
@@ -59,6 +59,7 @@ The application configured as multitenant application. User only show their phot
 * Select an app type. I prefer "Consumer" one and click next
 * You can add your details Display name, App Contact Email and Business Manager Account witch is an optional
 * Facebook will ask you’re to conform your password
+*
 
 
 - Step 3 - .env file configaration
