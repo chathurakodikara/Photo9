@@ -80,5 +80,7 @@ its time run the application and enjoy
 
 * Having a Docker container is grate. I already have a setup with me. However I feel it should improve. The Docker container will coming soon.. 
 
-### feel free to reachout to me via chathura321@gmail.com or github.
+### Feel free to reach out to me.
+- email: chathura321@gmail.com 
+- [GitHub](https://github.com/chathurakodikara/Photo9).
 
