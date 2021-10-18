@@ -51,23 +51,25 @@ The application configured as multitenant application. User only show their phot
 
 
 
-##### Step 2 time to create the app account
+##### Step 2 - time to create the app account
+I am planing to do a video on how to create a facebook app for aouth very zoon
 
-* Create Facebook Developer account using https://developers.facebook.com/apps/
-* You can login using your Facebook username and password
-* Then click on Create App button. it might be in the right side
-* Select an app type. I prefer "Consumer" one and click next
-* You can add your details Display name, App Contact Email and Business Manager Account witch is an optional
-* Facebook will ask you’re to conform your password
-*
+* Please create a Facebook Developer account using https://developers.facebook.com/apps/
+* then create a app with oauth loagin. 
+* We need facebook app searet and app id to countine.
 
-
-- Step 3 - .env file configaration
+##### Step 3 - update .env file 
 
 - Feel free to use the sample env file provide with the project
 - Create a database and update your .env file
 - Finaly update your Facebook CLIENT_ID and CLIENT_SECRET. The information can be found in the Facebook developer account you created
-- 
-- **FACEBOOK_CLIENT_ID
-- **FACEBOOK_CLIENT_SECRET
 
+```shell
+:~# FACEBOOK_CLIENT_ID=
+:~# FACEBOOK_CLIENT_SECRET=
+```
+##### Step 4
+its time run the application and enjoy
+```shell
+:~# php artisan serve
+```
