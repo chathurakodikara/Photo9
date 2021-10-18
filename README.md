@@ -27,7 +27,7 @@ The application configured as multitenant application. User only show their phot
 
 ## How to Configure
 
-##### Step 1
+#### Step 1
 
 * Clone git repo
 ```shell
@@ -51,14 +51,14 @@ The application configured as multitenant application. User only show their phot
 
 
 
-##### Step 2 - time to create the app account
+#### Step 2 - time to create the app account
 I am planing to do a video on how to create a facebook app for aouth very zoon
 
 * Please create a Facebook Developer account using https://developers.facebook.com/apps/
 * then create a app with oauth loagin. 
 * We need facebook app searet and app id to countine.
 
-##### Step 3 - update .env file 
+#### Step 3 - update .env file 
 
 - Feel free to use the sample env file provide with the project
 - Create a database and update your .env file
@@ -68,7 +68,7 @@ I am planing to do a video on how to create a facebook app for aouth very zoon
 :~# FACEBOOK_CLIENT_ID=
 :~# FACEBOOK_CLIENT_SECRET=
 ```
-##### Step 4
+#### Step 4
 its time run the application and enjoy
 ```shell
 :~# php artisan serve
