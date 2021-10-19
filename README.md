@@ -71,6 +71,17 @@ its time run the application and enjoy
 ```shell
 :~# php artisan serve
 ```
+## Tes Cases
+
+Auth test. it redirects to login route. need a had to import mockey codes
+```shell
+:~# php artisan test --filter OAuthTest
+```
+
+Test own phots in the db
+```shell
+:~# php artisan test --filter PhotoTest
+```
 
 
 ## I am working on..
