@@ -12,14 +12,11 @@ class PhotoTest extends TestCase
 {
     use RefreshDatabase;
     /**
-     * A basic feature test example.
+     * run test on photo model and its routes
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->withoutExceptionHandling();
-    }
+   
 
     public function test_guest_users_cannot_visit_photos_page()
     {
@@ -28,6 +25,7 @@ class PhotoTest extends TestCase
         $response->assertStatus(302);
         $response->assertRedirect(route('login'));
     }
+
 
     public function test_oauth_users_can_visit_photos_page()
     {
@@ -38,7 +36,10 @@ class PhotoTest extends TestCase
 
     }
 
-    public function test_photos_page_fetch_phtos_from_db()
+    /**
+     * /photos get request has photos variable
+     */
+    public function test_photos_page_fetch_photos_from_db()
     {
    
         $this->actingAs($user = User::factory()->create());
@@ -46,4 +47,7 @@ class PhotoTest extends TestCase
         $response->assertViewHas('photos');
     }
 
+   
+
+  
 }

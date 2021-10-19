@@ -52,11 +52,9 @@ The application configured as multitenant application. User only show their phot
 
 
 #### Step 2 - time to create the app account
-I am planing to do a video on how to create a facebook app for aouth very zoon
+ 
+- [My YouTube video about configring socillite plugin with facebook](https://youtu.be/HI2_nnkVjxQ).
 
-* Please create a Facebook Developer account using https://developers.facebook.com/apps/
-* then create a app with oauth loagin. 
-* We need facebook app searet and app id to countine.
 
 #### Step 3 - update .env file 
 
