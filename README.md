@@ -71,7 +71,7 @@ its time run the application and enjoy
 ```shell
 :~# php artisan serve
 ```
-## Tes Cases
+## Test Cases
 
 Auth test. it redirects to login route. need a had to import mockey codes
 ```shell
